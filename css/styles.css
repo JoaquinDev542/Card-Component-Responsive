@@ -1,0 +1,113 @@
+:root {
+    --white:#fff;
+    --white-dark:#efefef;
+    --black:#121212;
+    --blue:#3b3beb;
+}
+
+* , ::before , ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f3f3f3;
+}
+
+.card {
+    width: 90%;
+    max-width: 375px;
+    padding: 40px 20px;
+    margin: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 15px  rgba(0, 0, 0, 0.233);
+            box-shadow: 2px 2px 15px  rgba(0, 0, 0, 0.233);
+    background-color: var(--white , #fff);
+}
+
+.card-texts {
+    text-align: center;
+}
+
+.card__icon {
+    width: 75px;
+}
+
+.card__title {
+    color: var(--black ,#121212);
+}
+
+.card__paragraph {
+    line-height: 1.5;
+}
+
+.form {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2px;
+    gap: 2px;
+}
+
+.input , .btn {
+    width: 100%;
+    padding: 7px 0;
+    border-radius: 5px;
+}
+
+.input {
+    text-align: center;
+    margin-bottom: 5px;
+    border: 1px solid var(--white-dark , #efefef);
+}
+
+.input:focus {
+    outline: 1px solid var(--blue , #3b3beb);
+}
+
+.btn {
+    position: relative;
+    border: none;
+    color: var(--white , #fff);
+    background-color: var(--blue ,#3b3beb) ;
+}
+
+.btn:hover {
+    cursor: pointer;
+    --blue:#2c2cc5;
+    background-color: var(--blue , #2c2cc5);
+}
+
+.card__spam {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: .8rem;
+}
+
+@media screen and (min-width:768px) {
+
+    .card__title {
+        font-size: 2rem;
+    }
+
+    .card__paragraph {
+        font-size: 1.10rem;
+    }
+
+    .input , .btn {
+        padding: 12px 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .btn:active {
+        top: 2px;
+    }
+}
